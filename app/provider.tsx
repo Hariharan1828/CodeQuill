@@ -13,9 +13,7 @@ export function Providers({children}:{children:React.ReactNode}) {
               enableSystem
               disableTransitionOnChange
             >
-            <div>
-              <ModeToggle/>
-            </div>
+            
               {children}
             </ThemeProvider>
     </SessionProvider>
