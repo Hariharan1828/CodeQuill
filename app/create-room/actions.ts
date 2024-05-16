@@ -11,4 +11,6 @@ export async function createRoomAction(roomData: Omit<Room,"id"|"userId">) {
         throw new Error("Unauthorized");
     }
     await db.insert(rooms).values({...roomData, userId:session.user.id});
+
+    // await deleteUser(session.user.id);
 }
