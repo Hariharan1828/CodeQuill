@@ -2,6 +2,8 @@
 import React from "react";
 import { motion } from "framer-motion";
 import dynamic from "next/dynamic";
+import { Button } from "./ui/button";
+import Link from "next/link";
 
 const World = dynamic(() => import("./ui/globe").then((m) => m.World), {
   ssr: false,
@@ -414,11 +416,16 @@ export function GlobeDemo() {
           <h2 className="text-center text-xl md:text-4xl font-bold text-black dark:text-white">
             CODEQUILL
           </h2>
+          <Button className=""asChild>
+            <Link href={"/create-room"}>Create Room</Link>
+          </Button>
           <p className="text-center text-base md:text-lg font-normal text-neutral-700 dark:text-neutral-200 max-w-md mt-2 mx-auto">
             Find your coding partner and code with your peers. Happy developement!
           </p>
+          
         </motion.div>
         <div className="absolute w-full bottom-0 inset-x-0 h-40 bg-gradient-to-b pointer-events-none select-none from-transparent dark:to-black to-white z-40" />
+       
         <div className="absolute w-full -bottom-20 h-72 md:h-full z-10">
           <World data={sampleArcs} globeConfig={globeConfig} />;
         </div>

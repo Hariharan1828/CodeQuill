@@ -88,7 +88,7 @@ export const testing = pgTable("testing",{
     name: text("name").notNull(),
     description:text("description"),
     language: text("language").notNull(),
-    githubRepo:text("githubRepo"),
+    githubRepo:text("githubRepo").notNull(),
     
   })
 
