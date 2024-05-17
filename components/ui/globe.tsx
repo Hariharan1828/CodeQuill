@@ -11,6 +11,7 @@ declare module "@react-three/fiber" {
   }
 }
 
+
 extend({ ThreeGlobe });
 
 const RING_PROPAGATION_SPEED = 3;
@@ -264,6 +265,7 @@ export function World(props: WorldProps) {
         intensity={0.8}
       />
       <Globe {...props} />
+      
       <OrbitControls
         enablePan={false}
         enableZoom={false}
