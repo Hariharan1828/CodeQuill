@@ -2,8 +2,9 @@ import Image from "next/image";
 import {db} from "@/db"
 import { GlobeDemo } from "@/components/globeImpl";
 import RoomCards from "@/components/RoomCards";
+import { getRoom } from "@/data-access/room";
 export default async function Home() {
-  const rooms = await db.query.rooms.findMany();
+  const rooms = await getRoom();
 
   return (
     <main className="">
